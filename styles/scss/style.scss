@@ -62,7 +62,10 @@ body {
 
 @import "title.scss";
 @import "header.scss";
-
+@import "first-page/enjoy.scss";
+@import "first-page/favorites-coffee.scss";
+@import "first-page/about.scss";
+@import "first-page/mobile-app.scss";
 @import "_footer";
 
 @media (max-width: 715.99px) {

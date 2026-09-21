@@ -1,0 +1,131 @@
+.mobile-app {
+  padding-top: 99px;
+  padding-bottom: 100px;
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+  align-items: center;
+
+  // .mobile-app__content
+
+  &__content {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 40px;
+  }
+
+  // .mobile-app__description
+
+  &__description {
+    color: var(--text-dark);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    align-self: stretch;
+  }
+
+  // .mobile-app__links
+
+  &__links {
+    display: flex;
+    gap: 20px;
+  }
+
+  // .mobile-app__link
+
+  &__link {
+    display: grid;
+    column-gap: 8px;
+    row-gap: 2px;
+    grid-template:
+      "icon a"
+      "icon b";
+    grid-template-columns: 33px auto;
+    justify-items: start;
+    width: 200px;
+    padding: 12px 20px;
+    border-radius: 100px;
+    border: 1px solid var(--border-dark);
+    background-color: transparent;
+    transition: all 0.5s;
+    cursor: pointer;
+    svg {
+      grid-area: icon;
+      path {
+        fill: #403f3d;
+        transition: all 0.5s;
+      }
+    }
+    span {
+      color: var(--text-dark);
+      text-align: center;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 14px */
+      align-self: end;
+    }
+    span:last-child {
+      color: var(--text-dark);
+      font-size: 1.6em;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; /* 24px */
+      align-self: start;
+      transition: all 0.5s;
+    }
+  }
+
+  // .mobile-app__image
+
+  &__image {
+    flex: 0 1 50%;
+    max-width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .mobile-app__link:hover {
+    background-color: var(--background-container);
+    transition: all 0.5s;
+    span {
+      color: var(--text-light);
+      transition: all 0.5s;
+    }
+    svg {
+      path {
+        fill: #e1d4c9;
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+@media (max-width: 768.99px) {
+  .mobile-app {
+    padding-bottom: 97px;
+    flex-direction: column;
+    gap: 100px;
+
+    &__content,
+    &__image {
+      flex: 0 1 100%;
+      max-width: 100%;
+    }
+  }
+}
+@media (max-width: 715.99px) {
+  .mobile-app {
+    gap: 40px;
+    padding-bottom: 90px;
+    &__links {
+      flex-direction: column;
+    }
+  }
+}
