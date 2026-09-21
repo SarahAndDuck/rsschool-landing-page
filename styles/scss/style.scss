@@ -67,6 +67,9 @@ body {
 @import "first-page/about.scss";
 @import "first-page/mobile-app.scss";
 @import "_footer";
+@import "menu-page/menu-block.scss";
+@import "menu-page/menu.scss";
+@import "menu-page/modal.scss";
 
 @media (max-width: 715.99px) {
   .container {
