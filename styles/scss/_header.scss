@@ -118,6 +118,18 @@
 .theme-switch-header {
   &__light {
     border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    background-color: #af917e;
+    transition: all 0.7s;
+    border-radius: 100px;
+    path {
+      fill: "#E1D4C9";
+    }
   }
   &__dark {
     display: flex;
@@ -136,7 +148,39 @@
     }
   }
 }
+html.dark .theme-switch-header {
+  &__light {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    background-color: transparent;
+    transition: all 0.7s;
+    border-radius: 100px;
+    path {
+      fill: "#E1D4C9";
+    }
+  }
 
+  &__dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    transition: all 0.7s;
+    background-color: #af907c;
+    svg {
+      path {
+        fill: #e1d4c9;
+        transition: all 0.7s;
+      }
+    }
+  }
+}
 // .logo
 
 .logo {
@@ -219,6 +263,28 @@
       }
       &__dark {
         background-color: #665f55;
+        transition: all 0.7s;
+        svg {
+          path {
+            fill: #e1d4c9;
+            transition: all 0.7s;
+          }
+        }
+      }
+    }
+  }
+  html.dark .theme-switch-header:hover {
+    .theme-switch-header {
+      &__light {
+        background-color: #413f3e;
+      }
+      &__light {
+        svg {
+          fill: #282828;
+        }
+      }
+      &__dark {
+        background-color: #af907c;
         transition: all 0.7s;
         svg {
           path {

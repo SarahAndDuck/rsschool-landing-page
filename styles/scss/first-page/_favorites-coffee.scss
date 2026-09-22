@@ -172,6 +172,16 @@
     }
   }
 }
+html.dark .slider {
+  &__control {
+    svg {
+      path {
+        stroke: #e1d3c8;
+        transition: all 0.5s;
+      }
+    }
+  }
+}
 .slider {
   // .slider__indicators
 
