@@ -7,6 +7,7 @@
 
   &__title {
     padding-bottom: 40px;
+    color: var(--text-dark);
   }
 
   // .favorites-coffee__slider
@@ -146,7 +147,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 100px;
-    border: 1px solid var(--border-dark);
+    border: 1px solid var(--dark-border-inverse);
     background-color: transparent;
     transition: all 0.5s;
     margin-bottom: 36px;
@@ -187,7 +188,7 @@
     height: 4px;
     width: 40px;
     border-radius: 100px;
-    background: var(--border-light);
+    background: var(--dark-border-primary);
     span {
       display: block;
       height: 100%;
@@ -198,7 +199,7 @@
       span {
         width: 100%;
         border-radius: 100px;
-        background: var(--border-dark);
+        background: var(--dark-border-inverse);
       }
     }
   }

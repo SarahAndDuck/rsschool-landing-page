@@ -75,7 +75,7 @@
     font-weight: 600;
     line-height: 150%; /* 24px */
     border-radius: 100px;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--dark-border-primary);
     padding: 8px 16px 8px 8px;
     display: flex;
     align-items: center;
@@ -86,7 +86,7 @@
 
   &__sign-button {
     border-radius: 100px;
-    background: var(--border-light);
+    background: var(--dark-border-primary);
     display: flex;
     width: 30px;
     height: 30px;
@@ -113,7 +113,7 @@
     line-height: 125%; /* 30px */
     padding-bottom: 20px;
     margin-bottom: 12px;
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--dark-border-primary);
   }
   // .modaL__information
 
@@ -136,7 +136,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 100px;
-    border: 1px solid var(--border-dark);
+    border: 1px solid var(--dark-border-inverse);
     height: 44px;
     font-size: 16px;
     font-weight: 600;

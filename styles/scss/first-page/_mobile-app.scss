@@ -5,7 +5,9 @@
   gap: 100px;
   justify-content: space-between;
   align-items: center;
-
+  &__title {
+    color: var(--text-dark);
+  }
   // .mobile-app__content
 
   &__content {
@@ -49,7 +51,7 @@
     width: 200px;
     padding: 12px 20px;
     border-radius: 100px;
-    border: 1px solid var(--border-dark);
+    border: 1px solid var(--dark-border-inverse);
     background-color: transparent;
     transition: all 0.5s;
     cursor: pointer;

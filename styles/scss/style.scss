@@ -5,10 +5,19 @@
   --background-body: #e1d4c9;
   --background-container: #665f55;
   --background-backdrop: rgba(64, 63, 61, 0.8);
-  --border-light: #c1b6ad;
-  --border-dark: #665f55;
+  --dark-border-primary: #c1b6ad;
+  --dark-border-inverse: #665f55;
 }
-
+html.dark {
+  --text-accent: #b0907a;
+  --text-light: #e1d4c9;
+  --text-dark: #e1d4c9;
+  --background-body: #292826;
+  --background-container: #403f3d;
+  --background-backdrop: rgba(41, 40, 38, 0.8);
+  --dark-border-primary: #665f55;
+  --dark-border-inverse: #c1b6ad;
+}
 html,
 body {
   height: 100%;

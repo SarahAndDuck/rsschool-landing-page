@@ -5,8 +5,19 @@
   --background-body: #e1d4c9;
   --background-container: #665f55;
   --background-backdrop: rgba(64, 63, 61, 0.8);
-  --border-light: #c1b6ad;
-  --border-dark: #665f55;
+  --dark-border-primary: #c1b6ad;
+  --dark-border-inverse: #665f55;
+}
+
+html.dark {
+  --text-accent: #b0907a;
+  --text-light: #e1d4c9;
+  --text-dark: #e1d4c9;
+  --background-body: #292826;
+  --background-container: #403f3d;
+  --background-backdrop: rgba(41, 40, 38, 0.8);
+  --dark-border-primary: #665f55;
+  --dark-border-inverse: #c1b6ad;
 }
 
 html,
@@ -138,7 +149,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 100px;
-  border: 1px solid var(--border-dark);
+  border: 1px solid var(--dark-border-inverse);
   background-color: transparent;
   cursor: pointer;
 }
@@ -599,6 +610,7 @@ body {
 }
 .favorites-coffee__title {
   padding-bottom: 40px;
+  color: var(--text-dark);
 }
 .slider {
   display: -webkit-box;
@@ -732,7 +744,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 100px;
-  border: 1px solid var(--border-dark);
+  border: 1px solid var(--dark-border-inverse);
   background-color: transparent;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -760,7 +772,7 @@ body {
   height: 4px;
   width: 40px;
   border-radius: 100px;
-  background: var(--border-light);
+  background: var(--dark-border-primary);
 }
 .slider__indicator span {
   display: block;
@@ -769,7 +781,7 @@ body {
 .slider__indicator_active span {
   width: 100%;
   border-radius: 100px;
-  background: var(--border-dark);
+  background: var(--dark-border-inverse);
 }
 
 @media (hover: hover) {
@@ -803,6 +815,7 @@ body {
 }
 .about__title {
   margin-bottom: 40px;
+  color: var(--text-dark);
 }
 .about__galleray {
   max-width: 1360px;
@@ -892,6 +905,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+.mobile-app__title {
+  color: var(--text-dark);
+}
 .mobile-app__content {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
@@ -938,7 +954,7 @@ body {
   width: 200px;
   padding: 12px 20px;
   border-radius: 100px;
-  border: 1px solid var(--border-dark);
+  border: 1px solid var(--dark-border-inverse);
   background-color: transparent;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -1146,7 +1162,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 100px;
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--dark-border-primary);
   cursor: pointer;
   background-color: transparent;
   -webkit-transition: all 0.5s;
@@ -1228,7 +1244,7 @@ body {
           align-items: center;
   gap: 8px;
   border-radius: 100px;
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--dark-border-primary);
   background-color: transparent;
   color: var(--text-dark);
   font-size: 1.6rem;
@@ -1262,8 +1278,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 100px;
-  border: 1px solid var(--border-light);
-  background: var(--border-light);
+  border: 1px solid var(--dark-border-primary);
+  background: var(--dark-border-primary);
 }
 .block__showcase {
   display: none;
@@ -1294,7 +1310,7 @@ body {
   height: 60px;
   margin: 0 auto 100px;
   border-radius: 100px;
-  border: 1px solid var(--border-dark, #665f55);
+  border: 1px solid var(--dark-border-inverse, #665f55);
   background-color: transparent;
   background-image: url("../../assets/images/icons/refresh.png");
   background-size: 24px 24px;
@@ -1316,7 +1332,7 @@ body {
   height: 506px;
   max-width: 310px;
   border-radius: 40px;
-  border: 1px solid var(--border-light, #c1b6ad);
+  border: 1px solid var(--dark-border-primary, #c1b6ad);
   cursor: pointer;
 }
 .item__image {
@@ -1522,7 +1538,7 @@ body {
   font-weight: 600;
   line-height: 150%; /* 24px */
   border-radius: 100px;
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--dark-border-primary);
   padding: 8px 16px 8px 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1534,7 +1550,7 @@ body {
 }
 .modal__sign-button {
   border-radius: 100px;
-  background: var(--border-light);
+  background: var(--dark-border-primary);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1568,7 +1584,7 @@ body {
   line-height: 125%; /* 30px */
   padding-bottom: 20px;
   margin-bottom: 12px;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--dark-border-primary);
 }
 .modal__information {
   padding-left: 24px;
@@ -1594,7 +1610,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 100px;
-  border: 1px solid var(--border-dark);
+  border: 1px solid var(--dark-border-inverse);
   height: 44px;
   font-size: 16px;
   font-weight: 600;
