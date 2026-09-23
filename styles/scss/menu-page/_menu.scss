@@ -1,0 +1,36 @@
+.menu {
+  // .menu__title
+
+  &__title {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  // .menu__block
+
+  &__block {
+  }
+
+  // .menu__tab-container
+
+  &__tab-container {
+    width: 370px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+.overlay.modal-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 14;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--background-backdrop);
+  overflow: auto;
+}
