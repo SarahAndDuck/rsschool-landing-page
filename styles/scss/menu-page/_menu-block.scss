@@ -81,6 +81,7 @@
 
   // .block__refresh
   &__refresh {
+    position: relative;
     display: none;
     width: 60px;
     height: 60px;
@@ -88,15 +89,27 @@
     border-radius: 100px;
     border: 1px solid var(--dark-border-inverse, #665f55);
     background-color: transparent;
-    background-image: url("../../assets/images/icons/refresh.png");
-    background-size: 24px 24px;
-    background-position: center center;
-    background-repeat: no-repeat;
+    cursor: pointer;
+    svg {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
   &__refresh.active {
     display: block;
   }
 }
+html.dark .block__refresh {
+  svg {
+    path {
+      stroke: #c1b6ad;
+    }
+  }
+}
+
 .item {
   display: flex;
   flex-direction: column;
@@ -182,7 +195,7 @@
   }
 }
 
-@media (max-width: 768.99px) {
+@media (max-width: 767px) {
   .block {
     margin-bottom: 40px;
     &__showcase {
