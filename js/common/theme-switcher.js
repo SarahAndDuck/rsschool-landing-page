@@ -12,20 +12,15 @@ function swithDarkTheme() {
 
 
 function swithLightTheme() {
-  if (logo)
-    logo.src = "./../assets/images/logo.svg"
-  if (headerBtnImg)
-    headerBtnImg.src = "./../assets/images/icons/coffee-cup.svg"
-  if (enjoyBtnImg)
-    enjoyBtnImg.src = "./../assets/images/icons/coffee-cup.svg"
+  if (nodes.logo)
+    nodes.logo.src = "./../assets/images/logo.svg"
+  if (nodes.headerBtnImg)
+    nodes.headerBtnImg.src = "./../assets/images/icons/coffee-cup.svg"
+  if (nodes.enjoyBtnImg)
+    nodes.enjoyBtnImg.src = "./../assets/images/icons/coffee-cup.svg"
 }
-if (nodes.savedTheme === 'dark') {
-  nodes.htmlEl.classList.add('dark');
-  swithDarkTheme()
-}
-if (nodes.savedTheme === 'light') {
-  swithLightTheme()
-}
+
+
 
 function handleToggleBtn() {
   nodes.htmlEl.classList.toggle('dark');
@@ -45,5 +40,12 @@ export function initSwithTheme() {
   nodes.logo = document.querySelector('.logo').firstElementChild;
   nodes.htmlEl = document.documentElement;
   nodes.savedTheme = localStorage.getItem('theme');
-  nodes.toggleBtn.addEventListener('click', () => { handleToggleBtn(); });
+  nodes.toggleBtn.addEventListener('click', () => { handleToggleBtn() });
+  if (nodes.savedTheme === 'dark') {
+    nodes.htmlEl.classList.add('dark');
+    swithDarkTheme()
+  }
+  if (nodes.savedTheme === 'light') {
+    swithLightTheme()
+  }
 }
