@@ -123,6 +123,7 @@ body {
   }
 }
 .header {
+  position: relative;
   width: 100%;
   min-height: 100px;
   display: -webkit-box;
@@ -159,7 +160,7 @@ body {
   position: absolute;
   width: 16px;
   height: 1.5px;
-  background-color: #282828;
+  background-color: var(--dark-border-inverse);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -198,6 +199,12 @@ body {
   height: 52px;
 }
 .header__theme-switch {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -216,16 +223,15 @@ body {
   cursor: pointer;
 }
 .header__button {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 8px;
   color: var(--text-dark);
   font-size: 1.6em;
@@ -234,7 +240,8 @@ body {
   line-height: 150%; /* 24px */
 }
 .header__button img {
-  display: block;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 .header__button::before {
   position: absolute;
@@ -278,7 +285,7 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 100px;
-  background-color: #af917e;
+  background-color: var(--text-accent);
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
   border-radius: 100px;
@@ -328,7 +335,7 @@ html.dark .theme-switch-header__light {
   border-radius: 100px;
 }
 html.dark .theme-switch-header__light path {
-  fill: "#E1D4C9";
+  fill: var(--text-light);
 }
 html.dark .theme-switch-header__dark {
   display: -webkit-box;
@@ -373,17 +380,26 @@ html.dark .theme-switch-header__dark svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 40px;
+  gap: 10px 40px;
+}
+.menu-header__item:last-child {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 10px;
 }
 .menu-header__link {
   position: relative;
-  display: block;
   color: var(--text-dark);
   font-size: 1.6em;
   font-style: normal;
@@ -451,9 +467,6 @@ html.dark .theme-switch-header__dark svg path {
   html.dark .theme-switch-header:hover .theme-switch-header__light {
     background-color: #413f3e;
   }
-  html.dark .theme-switch-header:hover .theme-switch-header__light svg {
-    fill: #282828;
-  }
   html.dark .theme-switch-header:hover .theme-switch-header__dark {
     background-color: #af907c;
     -webkit-transition: all 0.7s;
@@ -465,7 +478,23 @@ html.dark .theme-switch-header__dark svg path {
     transition: all 0.7s;
   }
 }
+@media (max-width: 1085px) {
+  .header {
+    gap: 100px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .menu-header {
+    width: 40%;
+  }
+}
 @media (max-width: 768.99px) {
+  .header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .menu-header,
   .header__button {
     display: none;
@@ -513,6 +542,9 @@ html.dark .theme-switch-header__dark svg path {
     font-size: 3.2em;
     font-weight: 600;
     line-height: 125%;
+  }
+  .menu-header__item:last-child {
+    position: static;
   }
   .header__burger {
     display: -webkit-box;
@@ -623,10 +655,9 @@ html.dark .theme-switch-header__dark svg path {
 }
 .enjoy__button img {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-10%);
+      -ms-transform: translateY(-10%);
+          transform: translateY(-10%);
   right: 62px;
   width: 20px;
   height: 20px;
