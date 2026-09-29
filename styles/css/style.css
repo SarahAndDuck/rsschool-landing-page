@@ -7,6 +7,7 @@
   --background-backdrop: rgba(64, 63, 61, 0.8);
   --dark-border-primary: #c1b6ad;
   --dark-border-inverse: #665f55;
+  --bg-modal: #e1d5c9;
 }
 
 html.dark {
@@ -18,6 +19,7 @@ html.dark {
   --background-backdrop: rgba(41, 40, 38, 0.8);
   --dark-border-primary: #665f55;
   --dark-border-inverse: #c1b6ad;
+  --bg-modal: #403f3d;
 }
 
 html,
@@ -1609,7 +1611,7 @@ html.dark .block__refresh svg path {
   display: none;
   gap: 20px;
   border-radius: 40px;
-  background: var(--background-body);
+  background: var(--bg-modal);
   max-width: 800px;
   padding: 16px;
   -webkit-box-pack: center;
@@ -1683,6 +1685,7 @@ html.dark .block__refresh svg path {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
+  cursor: pointer;
 }
 .modal__sign-button {
   border-radius: 100px;
@@ -1698,8 +1701,10 @@ html.dark .block__refresh svg path {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 .modal__button-selected {
+  cursor: pointer;
   color: var(--text-light);
   background: var(--background-container);
 }
@@ -1751,6 +1756,7 @@ html.dark .block__refresh svg path {
   font-size: 16px;
   font-weight: 600;
   line-height: 150%; /* 24px */
+  cursor: pointer;
 }
 
 .modal.modal-open {
