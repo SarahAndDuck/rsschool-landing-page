@@ -9,7 +9,7 @@ function headerBurgerHeandler() {
 }
 
 function menuHeaderHeandler() {
-  if (headerBurger.classList.contains("burger-open")) {
+  if (nodes.headerBurger.classList.contains("burger-open")) {
     nodes.body.classList.remove("overflow-hidden");
     nodes.menuHeader.classList.remove("burger-open");
     nodes.headerBurger.classList.remove("burger-open");
@@ -23,6 +23,13 @@ export function initBurger() {
   nodes.menuHeader = document.querySelector(".menu-header");
   nodes.headerBurger.addEventListener("click", headerBurgerHeandler);
   nodes.menuHeader.addEventListener("click", menuHeaderHeandler);
+  document.addEventListener('keydown', (event) => {
+
+    if (event.key === 'Escape') {
+
+      menuHeaderHeandler()
+    }
+  });
 
 }
 
