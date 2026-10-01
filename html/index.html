@@ -15,10 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="node_modules/modern-normalize/modern-normalize.css"
-    />
+    /> -->
     <link rel="stylesheet" href="./../styles/css/style.css" />
     <title>Coffee house</title>
   </head>
@@ -46,8 +46,19 @@
               <li class="menu-header__item">
                 <a href="#mobile-app" class="menu-header__link">Mobile app</a>
               </li>
-              <li class="mmenu-header__item">
+              <li class="menu-header__item">
                 <a href="#footer" class="menu-header__link">Contact us</a>
+              </li>
+              <li class="menu-header__item">
+                <a class="header__button menu-header__link" href="menu.html"
+                  >Menu
+
+                  <img
+                    id="header__button"
+                    src="./../assets/images/icons/coffee-cup.svg"
+                    alt="coffee cup icon"
+                  />
+                </a>
               </li>
             </ul>
           </nav>
@@ -86,15 +97,7 @@
                 </svg>
               </div>
             </div>
-            <a class="header__button" href="menu.html"
-              >Menu
 
-              <img
-                id="header__button"
-                src="./../assets/images/icons/coffee-cup.svg"
-                alt="coffee cup icon"
-              />
-            </a>
             <button class="header__burger"><span></span> <span></span></button>
           </div>
         </div>
@@ -541,5 +544,6 @@
       </div>
     </div>
   </body>
-  <script src="../js/script.js" type="module"></script>
+  <script src="../js/common/script.js" type="module"></script>
+  <script src="../js/first-pages/script.js" type="module"></script>
 </html>
